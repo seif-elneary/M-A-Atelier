@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إضافة طلب | M&A Atelier</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="order-page">
+
+        <!-- Top Bar -->
+        <header class="order-header">
+
+            <a href="index.html" class="back-button">
+                <span>→</span> الرئيسية
+            </a>
+
+            <div class="page-brand">
+                <span>M&A</span>
+                <small>ATELIER</small>
+            </div>
+
+            <div class="order-number">
+                <small>ORDER</small>
+                <strong id="orderNumber">ORDER-001</strong>
+            </div>
+
+        </header>
+
+
+        <!-- Page Intro -->
+        <section class="page-intro">
+
+            <span class="eyebrow">NEW ORDER</span>
+
+            <h1>
+                إضافة
+                <span>طلب جديد</span>
+            </h1>
+
+            <p>
+                أدخل بيانات الفستان والعميلة، ثم احفظ الطلب للانتقال تلقائيًا إلى المعاينة.
+            </p>
+
+        </section>
+
+
+        <!-- Form -->
+        <form id="orderForm" class="order-form">
+
+
+            <!-- =========================
+                 DRESS INFORMATION
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                    <div>
+                        <span>THE DRESS</span>
+                        <h2>بيانات الفستان</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+
+                        <label for="dressName">
+                            اسم / موديل الفستان
+                            <b>*</b>
+                        </label>
+
+                        <input type="text" id="dressName" name="dressName" placeholder="مثال: فستان سارة" required>
+
+                    </div>
+
+
+                    <!-- Dress Image -->
+
+                    <div class="form-group full">
+
+                        <label>
+                            صورة الفستان
+                        </label>
+
+                        <div class="image-upload">
+
+                            <input type="file" id="dressImage" accept="image/*" hidden>
+
+                            <label for="dressImage" class="upload-box" id="uploadBox">
+
+                                <div class="upload-icon">
+                                    +
+                                </div>
+
+                                <div>
+                                    <strong>إضافة صورة الفستان</strong>
+                                    <span>PNG / JPG / WEBP</span>
+                                </div>
+
+                            </label>
+
+                            <div class="image-preview" id="imagePreview"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 DATES
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+                    <div>
+                        <span>SCHEDULE</span>
+                        <h2>مواعيد الطلب</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid four-columns">
+
+                    <div class="form-group">
+
+                        <label for="bookingDate">
+                            تاريخ الحجز
+                            <b>*</b>
+                        </label>
+
+                        <input type="date" id="bookingDate" name="bookingDate" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="eventDate">
+                            تاريخ المناسبة
+                            <b>*</b>
+                        </label>
+
+                        <input type="date" id="eventDate" name="eventDate" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="receiveDate">
+                            تاريخ الاستلام
+                        </label>
+
+                        <input type="date" id="receiveDate" name="receiveDate">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="deliveryDate">
+                            تاريخ التسليم
+                        </label>
+
+                        <input type="date" id="deliveryDate" name="deliveryDate">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 CUSTOMER INFORMATION
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        03
+                    </div>
+
+                    <div>
+                        <span>CUSTOMER</span>
+                        <h2>بيانات العميل</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="groomName">
+                            اسم العريس
+                        </label>
+
+                        <input type="text" id="groomName" name="groomName" placeholder="اسم العريس">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="brideName">
+                            اسم العروسة
+                        </label>
+
+                        <input type="text" id="brideName" name="brideName" placeholder="اسم العروسة">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phoneOne">
+                            رقم الهاتف الأول
+                            <b>*</b>
+                        </label>
+
+                        <input type="tel" id="phoneOne" name="phoneOne" placeholder="01XXXXXXXXX" inputmode="tel" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phoneTwo">
+                            رقم الهاتف الثاني
+                        </label>
+
+                        <input type="tel" id="phoneTwo" name="phoneTwo" placeholder="01XXXXXXXXX" inputmode="tel">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 PAYMENT
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        04
+                    </div>
+
+                    <div>
+                        <span>PAYMENT</span>
+                        <h2>البيانات المالية</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid three-columns">
+
+                    <div class="form-group">
+
+                        <label for="totalAmount">
+                            المبلغ
+                            <b>*</b>
+                        </label>
+
+                        <div class="money-input">
+
+                            <input type="number" id="totalAmount" name="totalAmount" placeholder="0" min="0" required>
+
+                            <span>جنيه</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="paidAmount">
+                            المدفوع
+                        </label>
+
+                        <div class="money-input">
+
+                            <input type="number" id="paidAmount" name="paidAmount" placeholder="0" min="0">
+
+                            <span>جنيه</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="remainingAmount">
+                            المتبقي
+                        </label>
+
+                        <div class="money-input calculated">
+
+                            <input type="number" id="remainingAmount" name="remainingAmount" value="0" readonly>
+
+                            <span>جنيه</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="insurance">
+                            التأمين
+                        </label>
+
+                        <div class="money-input">
+
+                            <input type="number" id="insurance" name="insurance" placeholder="0" min="0">
+
+                            <span>جنيه</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 NOTES
+            ========================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">
+                        05
+                    </div>
+
+                    <div>
+                        <span>NOTES</span>
+                        <h2>ملاحظات الطلب</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label for="notes">
+                        ملاحظات
+                    </label>
+
+                    <textarea id="notes" name="notes" rows="6" placeholder="اكتب أي تفاصيل أو ملاحظات خاصة بالطلب..."></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- Actions -->
+
+            <div class="form-actions">
+
+                <a href="index.html" class="cancel-button">
+                    إلغاء
+                </a>
+
+                <button type="submit" class="save-button">
+                    <span>حفظ الطلب</span>
+                    <strong>←</strong>
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

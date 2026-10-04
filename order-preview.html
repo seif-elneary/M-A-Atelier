@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> M&A Atelier | معاينة الطلب</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- html2pdf.js -->
+    <script src="js/html2pdf.bundle.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <main class="preview-page">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="preview-header">
+
+
+            <button type="button" class="back-button" id="headerEditButton">
+                ← تعديل الطلب
+            </button>
+
+
+            <div class="page-brand">
+
+                <div class="brand-mark">
+                    A&M
+                </div>
+
+
+                <div>
+
+                    <h1>
+                        M&A Atelier
+                    </h1>
+
+                    <span>
+                        Order Preview
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="order-number">
+
+                <span>
+                    رقم الطلب
+                </span>
+
+                <strong id="previewOrderNumber">
+                    ORDER-001
+                </strong>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =========================
+             ORDER PREVIEW
+        ========================== -->
+
+        <section class="preview-wrapper">
+
+            <div class="order-preview-card" id="orderPreviewCard">
+
+
+                <!-- =========================
+                     HERO
+                ========================== -->
+
+                <section class="preview-hero">
+
+
+                    <div class="dress-image-container" id="previewDressImage">
+
+                        <div class="dress-image-placeholder">
+
+                            <span>
+                                👗
+                            </span>
+
+                            <p>
+                                لا توجد صورة
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="dress-main-info">
+
+                        <span class="preview-label">
+                            DRESS / MODEL
+                        </span>
+
+
+                        <h2 id="previewDressName">
+                            -
+                        </h2>
+
+
+                        <div class="hero-order">
+
+                            <span>
+                                رقم الطلب
+                            </span>
+
+                            <strong id="heroOrderNumber">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     CUSTOMER
+                ========================== -->
+
+                <section class="preview-section">
+
+                    <div class="section-heading">
+
+                        <span>
+                            01
+                        </span>
+
+
+                        <div>
+
+                            <small>
+                                CUSTOMER
+                            </small>
+
+                            <h3>
+                                بيانات العميل
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="preview-grid">
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                اسم العريس
+                            </span>
+
+                            <strong id="previewGroom">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                اسم العروسة
+                            </span>
+
+                            <strong id="previewBride">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                رقم الهاتف الأول
+                            </span>
+
+                            <strong id="previewPhoneOne">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                رقم الهاتف الثاني
+                            </span>
+
+                            <strong id="previewPhoneTwo">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     SCHEDULE
+                ========================== -->
+
+                <section class="preview-section">
+
+                    <div class="section-heading">
+
+                        <span>
+                            02
+                        </span>
+
+
+                        <div>
+
+                            <small>
+                                SCHEDULE
+                            </small>
+
+                            <h3>
+                                المواعيد
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="preview-grid">
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                تاريخ الحجز
+                            </span>
+
+                            <strong id="previewBooking">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                تاريخ المناسبة
+                            </span>
+
+                            <strong id="previewEvent">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                تاريخ الاستلام
+                            </span>
+
+                            <strong id="previewReceive">
+                                -
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="preview-item">
+
+                            <span>
+                                تاريخ التسليم
+                            </span>
+
+                            <strong id="previewDelivery">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     PAYMENT
+                ========================== -->
+
+                <section class="preview-section">
+
+                    <div class="section-heading">
+
+                        <span>
+                            03
+                        </span>
+
+
+                        <div>
+
+                            <small>
+                                PAYMENT
+                            </small>
+
+                            <h3>
+                                البيانات المالية
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="payment-grid">
+
+
+                        <div class="payment-item total">
+
+                            <span>
+                                إجمالي الطلب
+                            </span>
+
+                            <strong>
+
+                                <span id="previewTotal">
+                                    0
+                                </span>
+
+                                <small>
+                                    جنيه
+                                </small>
+
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="payment-item paid">
+
+                            <span>
+                                المدفوع
+                            </span>
+
+                            <strong>
+
+                                <span id="previewPaid">
+                                    0
+                                </span>
+
+                                <small>
+                                    جنيه
+                                </small>
+
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="payment-item remaining">
+
+                            <span>
+                                المتبقي
+                            </span>
+
+                            <strong>
+
+                                <span id="previewRemaining">
+                                    0
+                                </span>
+
+                                <small>
+                                    جنيه
+                                </small>
+
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="payment-item insurance">
+
+                            <span>
+                                التأمين
+                            </span>
+
+                            <strong id="previewInsurance">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     NOTES
+                ========================== -->
+
+                <section class="preview-section notes-section">
+
+                    <div class="section-heading">
+
+                        <span>
+                            04
+                        </span>
+
+
+                        <div>
+
+                            <small>
+                                NOTES
+                            </small>
+
+                            <h3>
+                                الملاحظات
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="notes-box" id="previewNotes">
+                        لا توجد ملاحظات.
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     FOOTER
+                ========================== -->
+
+                <footer class="order-card-footer">
+
+
+                    <div>
+
+                        <strong>
+                           M&A Atelier
+                        </strong>
+
+                        <span>
+                            Atelier Management
+                        </span>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <span>
+                            Order
+                        </span>
+
+                        <strong id="footerOrderNumber">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </footer>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ACTION BUTTONS
+        ========================== -->
+
+        <div class="preview-actions">
+
+
+            <button type="button" class="action-button primary" id="downloadPdfButton">
+                📄 تنزيل PDF
+            </button>
+
+
+
+            <button type="button" class="action-button whatsapp" id="whatsappButton">
+                💬 إرسال WhatsApp
+            </button>
+
+
+
+            <button type="button" class="action-button secondary" id="editOrderButton">
+                ✎ تعديل الطلب
+            </button>
+
+
+
+            <a href="index.html" class="action-button secondary">
+                ← الرئيسية
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+
+                /*
+                ==========================================
+                GET ORDER
+                ==========================================
+                */
+
+                const savedOrder =
+                    sessionStorage.getItem(
+                        "amOrder"
+                    );
+
+
+                if (!savedOrder) {
+
+                    alert(
+                        "لا يوجد طلب للمعاينة."
+                    );
+
+                    window.location.href =
+                        "add-order.html";
+
+                    return;
+
+                }
+
+
+                let order;
+
+
+                try {
+
+                    order =
+                        JSON.parse(
+                            savedOrder
+                        );
+
+                } catch (error) {
+
+                    console.error(error);
+
+                    alert(
+                        "حدث خطأ في بيانات الطلب."
+                    );
+
+                    window.location.href =
+                        "add-order.html";
+
+                    return;
+
+                }
+
+
+
+                /*
+                ==========================================
+                HELPER
+                ==========================================
+                */
+
+                function setText(
+                    id,
+                    value
+                ) {
+
+                    const element =
+                        document.getElementById(
+                            id
+                        );
+
+
+                    if (element) {
+
+                        element.textContent =
+                            value || "-";
+
+                    }
+
+                }
+
+
+
+                /*
+                ==========================================
+                ORDER NUMBER
+                ==========================================
+                */
+
+                setText(
+                    "previewOrderNumber",
+                    order.orderNumber
+                );
+
+
+                setText(
+                    "heroOrderNumber",
+                    order.orderNumber
+                );
+
+
+                setText(
+                    "footerOrderNumber",
+                    order.orderNumber
+                );
+
+
+
+                /*
+                ==========================================
+                DRESS
+                ==========================================
+                */
+
+                setText(
+                    "previewDressName",
+                    order.dressName
+                );
+
+
+
+                /*
+                ==========================================
+                CUSTOMER
+                ==========================================
+                */
+
+                setText(
+                    "previewGroom",
+                    order.groomName
+                );
+
+
+                setText(
+                    "previewBride",
+                    order.brideName
+                );
+
+
+                setText(
+                    "previewPhoneOne",
+                    order.phoneOne
+                );
+
+
+                setText(
+                    "previewPhoneTwo",
+                    order.phoneTwo
+                );
+
+
+
+                /*
+                ==========================================
+                DATES
+                ==========================================
+                */
+
+                setText(
+                    "previewBooking",
+                    order.bookingDate
+                );
+
+
+                setText(
+                    "previewEvent",
+                    order.eventDate
+                );
+
+
+                setText(
+                    "previewReceive",
+                    order.receiveDate
+                );
+
+
+                setText(
+                    "previewDelivery",
+                    order.deliveryDate
+                );
+
+
+
+                /*
+                ==========================================
+                PAYMENT
+                ==========================================
+                */
+
+                setText(
+                    "previewTotal",
+                    order.total
+                );
+
+
+                setText(
+                    "previewPaid",
+                    order.paid
+                );
+
+
+                setText(
+                    "previewRemaining",
+                    order.remaining
+                );
+
+
+                setText(
+                    "previewInsurance",
+                    order.insurance
+                );
+
+
+
+                /*
+                ==========================================
+                NOTES
+                ==========================================
+                */
+
+                setText(
+                    "previewNotes",
+                    order.notes ||
+                    "لا توجد ملاحظات."
+                );
+
+
+
+                /*
+                ==========================================
+                DRESS IMAGE
+                ==========================================
+                */
+
+                const imageContainer =
+                    document.getElementById(
+                        "previewDressImage"
+                    );
+
+
+                if (
+                    order.image &&
+                    imageContainer
+                ) {
+
+                    imageContainer.innerHTML =
+                        "";
+
+
+                    const image =
+                        document.createElement(
+                            "img"
+                        );
+
+
+                    image.src =
+                        order.image;
+
+
+                    image.alt =
+                        order.dressName ||
+                        "Dress Image";
+
+
+                    image.style.width =
+                        "100%";
+
+
+                    image.style.height =
+                        "100%";
+
+
+                    image.style.objectFit =
+                        "cover";
+
+
+                    image.style.display =
+                        "block";
+
+
+                    imageContainer.appendChild(
+                        image
+                    );
+
+                }
+
+
+
+                /*
+                ==========================================
+                EDIT ORDER
+                ==========================================
+                */
+
+                function editOrder() {
+
+                    sessionStorage.setItem(
+                        "amEditMode",
+                        "true"
+                    );
+
+
+                    window.location.href =
+                        "add-order.html";
+
+                }
+
+
+                /*
+                ==========================================
+                HEADER EDIT BUTTON
+                ==========================================
+                */
+
+                const headerEditButton =
+                    document.getElementById(
+                        "headerEditButton"
+                    );
+
+
+                if (headerEditButton) {
+
+                    headerEditButton.addEventListener(
+                        "click",
+                        editOrder
+                    );
+
+                }
+
+
+
+                /*
+                ==========================================
+                BOTTOM EDIT BUTTON
+                ==========================================
+                */
+
+                const editOrderButton =
+                    document.getElementById(
+                        "editOrderButton"
+                    );
+
+
+                if (editOrderButton) {
+
+                    editOrderButton.addEventListener(
+                        "click",
+                        editOrder
+                    );
+
+                }
+
+
+
+                /*
+                ==========================================
+                PDF DOWNLOAD
+                ==========================================
+                */
+
+                const downloadPdfButton =
+                    document.getElementById(
+                        "downloadPdfButton"
+                    );
+
+
+                if (downloadPdfButton) {
+
+                    downloadPdfButton.addEventListener(
+                        "click",
+                        async function() {
+
+
+                            const orderCard =
+                                document.getElementById(
+                                    "orderPreviewCard"
+                                );
+
+
+                            if (!orderCard) {
+
+                                alert(
+                                    "لم يتم العثور على بيانات الطلب."
+                                );
+
+                                return;
+
+                            }
+
+
+                            if (
+                                typeof html2pdf ===
+                                "undefined"
+                            ) {
+
+                                alert(
+                                    "ملف html2pdf.js غير موجود. تأكد من وجوده داخل مجلد js."
+                                );
+
+                                return;
+
+                            }
+
+
+                            const originalText =
+                                downloadPdfButton.textContent;
+
+
+                            downloadPdfButton.disabled =
+                                true;
+
+
+                            downloadPdfButton.textContent =
+                                "جاري تجهيز PDF...";
+
+
+                            /*
+                            ==================================
+                            PDF NAME
+                            اسم العروسة + رقم الطلب
+                            ==================================
+                            */
+
+                            const cleanBrideName =
+                                (
+                                    order.brideName ||
+                                    "M&A-Order"
+                                )
+                                .replace(
+                                    /[\\/:*?"<>|]/g,
+                                    "-"
+                                )
+                                .trim();
+
+
+                            const filename =
+                                cleanBrideName +
+                                "-" +
+                                (
+                                    order.orderNumber ||
+                                    "ORDER"
+                                ) +
+                                ".pdf";
+
+
+                            /*
+                            ==================================
+                            PDF OPTIONS
+                            ==================================
+                            */
+
+                            const options = {
+
+                                margin: [
+                                    8,
+                                    8,
+                                    8,
+                                    8
+                                ],
+
+                                filename: filename,
+
+                                image: {
+
+                                    type: "jpeg",
+
+                                    quality: 0.98
+
+                                },
+
+                                html2canvas: {
+
+                                    scale: 2,
+
+                                    useCORS: true,
+
+                                    allowTaint: true,
+
+                                    backgroundColor: "#0b0a09",
+
+                                    logging: false
+
+                                },
+
+                                jsPDF: {
+
+                                    unit: "mm",
+
+                                    format: "a4",
+
+                                    orientation: "portrait"
+
+                                },
+
+                                pagebreak: {
+
+                                    mode: [
+                                        "css",
+                                        "legacy"
+                                    ]
+
+                                }
+
+                            };
+
+
+                            try {
+
+                                await html2pdf()
+
+                                .set(
+                                    options
+                                )
+
+                                .from(
+                                    orderCard
+                                )
+
+                                .save();
+
+
+                            } catch (error) {
+
+                                console.error(
+                                    "PDF Error:",
+                                    error
+                                );
+
+
+                                alert(
+                                    "حدث خطأ أثناء إنشاء ملف PDF."
+                                );
+
+
+                            } finally {
+
+                                downloadPdfButton.disabled =
+                                    false;
+
+
+                                downloadPdfButton.textContent =
+                                    originalText;
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+
+                /*
+                ==========================================
+                WHATSAPP
+                ==========================================
+                */
+
+                const whatsappButton =
+                    document.getElementById(
+                        "whatsappButton"
+                    );
+
+
+                if (whatsappButton) {
+
+                    whatsappButton.addEventListener(
+                        "click",
+                        function() {
+
+
+                            const message =
+
+                                `M&A ATELIER
+━━━━━━━━━━━━━━━━━━
+
+📋 بيانات الطلب
+
+رقم الطلب:
+${order.orderNumber || "-"}
+
+اسم / موديل الفستان:
+${order.dressName || "-"}
+
+
+👰 بيانات العميل
+
+اسم العريس:
+${order.groomName || "-"}
+
+اسم العروسة:
+${order.brideName || "-"}
+
+رقم الهاتف الأول:
+${order.phoneOne || "-"}
+
+رقم الهاتف الثاني:
+${order.phoneTwo || "-"}
+
+
+📅 المواعيد
+
+تاريخ الحجز:
+${order.bookingDate || "-"}
+
+تاريخ المناسبة:
+${order.eventDate || "-"}
+
+تاريخ الاستلام:
+${order.receiveDate || "-"}
+
+تاريخ التسليم:
+${order.deliveryDate || "-"}
+
+
+💰 البيانات المالية
+
+إجمالي الطلب:
+${order.total || "0"} جنيه
+
+المدفوع:
+${order.paid || "0"} جنيه
+
+المتبقي:
+${order.remaining || "0"} جنيه
+
+التأمين:
+${order.insurance || "-"}
+
+
+📝 الملاحظات
+
+${order.notes || "لا توجد ملاحظات."}
+
+━━━━━━━━━━━━━━━━━━
+
+M&A ATELIER`;
+
+
+                            /*
+                            ==================================
+                            PHONE
+                            ==================================
+                            */
+
+                            let phone =
+                                order.phoneOne ||
+                                "";
+
+
+                            phone =
+                                phone.replace(
+                                    /\D/g,
+                                    ""
+                                );
+
+
+                            if (
+                                phone.startsWith(
+                                    "0"
+                                )
+                            ) {
+
+                                phone =
+                                    "20" +
+                                    phone.substring(
+                                        1
+                                    );
+
+                            }
+
+
+                            /*
+                            ==================================
+                            WHATSAPP URL
+                            ==================================
+                            */
+
+                            const whatsappURL =
+                                "https://wa.me/" +
+                                phone +
+                                "?text=" +
+                                encodeURIComponent(
+                                    message
+                                );
+
+
+                            window.open(
+                                whatsappURL,
+                                "_blank"
+                            );
+
+                        }
+                    );
+
+                }
+
+            }
+
+        );
+    </script>
+
+</body>
+
+</html>
